@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnswerResultViewController" customModule="Quizer" customModuleProvider="target">
+            <connections>
+                <outlet property="animationViewContriner" destination="6nU-U2-85f" id="5Dc-Kp-4FE"/>
+                <outlet property="glowingViewBottomConstraint" destination="f8a-1H-lEz" id="0H6-4a-g5e"/>
+                <outlet property="nextQuizButton" destination="EFX-oU-E6R" id="lgp-fV-n5d"/>
+                <outlet property="shiningImageView" destination="Ea0-x6-bWT" id="2Wa-e5-uqq"/>
+                <outlet property="statusLabel" destination="wCI-gF-aPi" id="fiO-vU-V0j"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AnswerResult_Background" translatesAutoresizingMaskIntoConstraints="NO" id="I2O-p8-kld">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shine" translatesAutoresizingMaskIntoConstraints="NO" id="Ea0-x6-bWT">
+                    <rect key="frame" x="-120.5" y="-149" width="616" height="616"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Ea0-x6-bWT" secondAttribute="height" multiplier="1:1" id="jPB-ic-og0"/>
+                    </constraints>
+                </imageView>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nU-U2-85f">
+                    <rect key="frame" x="112.5" y="84" width="150" height="150"/>
+                    <color key="backgroundColor" white="1" alpha="0.86856294014084512" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="6nU-U2-85f" secondAttribute="height" multiplier="1:1" id="Kxn-1E-9kO"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="هوراااااا! درست جواب دادی" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCI-gF-aPi">
+                    <rect key="frame" x="104.5" y="298" width="166.5" height="20"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-oU-E6R">
+                    <rect key="frame" x="62.5" y="590" width="250" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="8jv-Ux-RUJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" title="بریم سوال بعدی"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="22.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="EFX-oU-E6R" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="2:3" id="3Tc-q6-K7Q"/>
+                <constraint firstItem="6nU-U2-85f" firstAttribute="centerX" secondItem="I2O-p8-kld" secondAttribute="centerX" id="Aak-X1-vR9"/>
+                <constraint firstItem="Ea0-x6-bWT" firstAttribute="centerY" secondItem="6nU-U2-85f" secondAttribute="centerY" id="Bp9-ES-3sS"/>
+                <constraint firstItem="wCI-gF-aPi" firstAttribute="top" secondItem="6nU-U2-85f" secondAttribute="bottom" constant="64" id="DDc-Rk-qsB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="I2O-p8-kld" secondAttribute="bottom" id="IOK-Gt-5Jy"/>
+                <constraint firstItem="6nU-U2-85f" firstAttribute="width" secondItem="I2O-p8-kld" secondAttribute="width" multiplier="2:5" id="Idj-uc-l6z"/>
+                <constraint firstItem="EFX-oU-E6R" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Miv-uu-LyU"/>
+                <constraint firstItem="wCI-gF-aPi" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="P40-Ox-iQp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="I2O-p8-kld" secondAttribute="trailing" id="Qvh-E2-i4f"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ea0-x6-bWT" secondAttribute="bottom" constant="200" id="f8a-1H-lEz"/>
+                <constraint firstItem="I2O-p8-kld" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fJ2-oK-aIf"/>
+                <constraint firstItem="6nU-U2-85f" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="jAJ-ID-g9E"/>
+                <constraint firstItem="Ea0-x6-bWT" firstAttribute="centerX" secondItem="6nU-U2-85f" secondAttribute="centerX" id="mDb-CP-4kN"/>
+                <constraint firstItem="I2O-p8-kld" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="t5J-BQ-Lfe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EFX-oU-E6R" secondAttribute="bottom" constant="32" id="w6I-zd-Mkp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="AnswerResult_Background" width="376.07998657226562" height="668.6400146484375"/>
+        <image name="Shine" width="989" height="989"/>
+    </resources>
+</document>
