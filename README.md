@@ -1,4 +1,4 @@
-#Quiz Application using Clean architecture and RxSwift
+# Quiz Application using Clean architecture and RxSwift
 
 ### Installing and build
 
