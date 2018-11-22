@@ -7,7 +7,12 @@ Dependencies in this project are provided via Cocoapods. Please install all depe
 `
 pod install
 `
-Build sequence: Domain > NetworkPlatform > Application 
+
+#### Build sequence:
+
+`
+Domain > NetworkPlatform > Application 
+`
 
 ## High level overview
 ![](https://raw.githubusercontent.com/sergdort/CleanArchitectureRxSwift/master/Architecture/Modules.png)
