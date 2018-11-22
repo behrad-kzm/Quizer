@@ -18,4 +18,11 @@ enum AnswerResultType {
     case .timeOut: return "زمان رو ازدست دادی"
     }
   }
+  var lottieAnimationNameRepresentation: String {
+    switch(self) {
+    case .success: return "win"
+    case .failur: return "loose"
+    case .timeOut: return "stopwatch"
+    }
+  }
 }

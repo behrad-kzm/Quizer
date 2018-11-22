@@ -45,6 +45,7 @@
 		3C96F91A21A69D3F00C9E1F8 /* loose.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C96F91921A69D3F00C9E1F8 /* loose.json */; };
 		3C96F91D21A6A50A00C9E1F8 /* Vibrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96F91C21A6A50A00C9E1F8 /* Vibrator.swift */; };
 		3C96F91F21A6B7FE00C9E1F8 /* TimerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96F91E21A6B7FE00C9E1F8 /* TimerCreator.swift */; };
+		3C96F92521A6D0E600C9E1F8 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96F92421A6D0E600C9E1F8 /* Storage.swift */; };
 		3C97852921A53DE000194ED0 /* QuizePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97852821A53DE000194ED0 /* QuizePageViewModel.swift */; };
 		3C97852C21A5423F00194ED0 /* QuizPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97852A21A5423F00194ED0 /* QuizPageViewController.swift */; };
 		3C97852D21A5423F00194ED0 /* QuizPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C97852B21A5423F00194ED0 /* QuizPageViewController.xib */; };
@@ -138,6 +139,7 @@
 		3C96F91921A69D3F00C9E1F8 /* loose.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loose.json; sourceTree = "<group>"; };
 		3C96F91C21A6A50A00C9E1F8 /* Vibrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibrator.swift; sourceTree = "<group>"; };
 		3C96F91E21A6B7FE00C9E1F8 /* TimerCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerCreator.swift; sourceTree = "<group>"; };
+		3C96F92421A6D0E600C9E1F8 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		3C97852821A53DE000194ED0 /* QuizePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizePageViewModel.swift; sourceTree = "<group>"; };
 		3C97852A21A5423F00194ED0 /* QuizPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPageViewController.swift; sourceTree = "<group>"; };
 		3C97852B21A5423F00194ED0 /* QuizPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizPageViewController.xib; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 		13A3A13821A482F600E7E512 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				3C96F92321A6D03400C9E1F8 /* Storage */,
 				13A3A13B21A4862700E7E512 /* Question */,
 				13A3A13921A4831500E7E512 /* InteractiveModelType.swift */,
 			);
@@ -390,6 +393,14 @@
 				3C96F91C21A6A50A00C9E1F8 /* Vibrator.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		3C96F92321A6D03400C9E1F8 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				3C96F92421A6D0E600C9E1F8 /* Storage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		3C97852521A53C7D00194ED0 /* QuizPage */ = {
@@ -793,6 +804,7 @@
 				13A3A14221A4899E00E7E512 /* GetQuestionUseCase.swift in Sources */,
 				13A3A13A21A4831500E7E512 /* InteractiveModelType.swift in Sources */,
 				13A3A13721A4812800E7E512 /* Constants.swift in Sources */,
+				3C96F92521A6D0E600C9E1F8 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -994,7 +1006,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1027,7 +1039,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1060,7 +1072,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = NetworkPlatform/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1093,7 +1105,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = NetworkPlatform/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1121,7 +1133,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32SKEMQWAM;
 				INFOPLIST_FILE = Quizer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1144,7 +1156,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32SKEMQWAM;
 				INFOPLIST_FILE = Quizer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

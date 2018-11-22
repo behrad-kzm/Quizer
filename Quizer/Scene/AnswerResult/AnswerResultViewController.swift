@@ -22,6 +22,7 @@ class AnswerResultViewController: UIViewController {
     super.viewDidLoad()
     setupUI()
     bindData()
+    
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -36,21 +37,9 @@ class AnswerResultViewController: UIViewController {
     assert(viewModel != nil)
     shiningImageView.alpha = 0
     animationViewContriner.layer.cornerRadius = animationViewContriner.bounds.height / 2
-    let animationName: String
-    switch viewModel.status {
-    case .success:
-      Vibrator.vibrate(hardness: 2)
-      animationName = "win"
-    case .failur:
-      Vibrator.vibrate(hardness: 1)
-      animationName = "loose"
-    default:
-      Vibrator.vibrate(hardness: 3)
-      animationName = "stopwatch"
-    }
     statusLabel.font = Appearance.fonts.captions()
     nextQuizButton.titleLabel?.font = Appearance.fonts.buttons()
-    animationView = LOTAnimationView(name: animationName)
+    animationView = LOTAnimationView(name: viewModel.status.lottieAnimationNameRepresentation)
     animationViewContriner.addSubview(animationView)
     animationViewContriner.layoutSubviews()
     animationView.contentMode = .scaleAspectFit

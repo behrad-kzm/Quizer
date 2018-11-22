@@ -10,6 +10,10 @@ import Foundation
 
 public enum Constants {
   
+  public enum StorageKeys: String {
+    case userScore = "com.Quiz.storagekeys.userScore"
+  }
+  
   public enum EndPoints: String {
     case baseUrl = "http://staging.barandehshow.ir/v2/admin"
     case questions = "question/show"
