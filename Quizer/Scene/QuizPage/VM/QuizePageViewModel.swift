@@ -51,6 +51,9 @@ final class QuizePageViewModel: ViewModelType {
       return countDownTimer
     }
     let isTimesUp = timer.map { (current) -> Bool in
+      if current < 6 {
+        Vibrator.vibrate(hardness: 3)
+      }
       return current < 1
     }
     let timeOutAction = isTimesUp.map { (finished) -> Void in

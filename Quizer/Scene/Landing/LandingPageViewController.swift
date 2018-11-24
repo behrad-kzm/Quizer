@@ -13,6 +13,7 @@ class LandingPageViewController: UIViewController {
   @IBOutlet weak var logoLabel: UILabel!
   @IBOutlet weak var logoTopConstraint: NSLayoutConstraint!
   @IBOutlet weak var startQuizButton: UIButton!
+  @IBOutlet weak var logoContainer: UIView!
   
   var viewModel: LandingViewModel!
   let disposeBag = DisposeBag()
@@ -36,16 +37,19 @@ class LandingPageViewController: UIViewController {
   }
   
   func setupUI() {
-    logoLabel.alpha = 0
+    logoContainer.alpha = 0
     startQuizButton.alpha = 0
     startQuizButton.titleLabel?.font = Appearance.fonts.buttons()
   }
   func animateLogo(){
     logoTopConstraint.constant = 100
+    Vibrator.vibrate(hardness: 4)
     UIView.animate(withDuration: 1, animations: {
-      self.logoLabel.alpha = 1
+      self.logoContainer.alpha = 1
       self.view.layoutSubviews()
+      
     }) {_ in
+      Vibrator.vibrate(hardness: 2)
       UIView.animate(withDuration: 0.2, animations: {
         self.startQuizButton.alpha = 1
       }, completion: {_ in

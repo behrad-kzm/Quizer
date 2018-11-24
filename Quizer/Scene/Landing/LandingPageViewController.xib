@@ -12,8 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LandingPageViewController" customModule="Quizer" customModuleProvider="target">
             <connections>
+                <outlet property="logoContainer" destination="6yi-yS-v0c" id="gb1-nZ-K9C"/>
                 <outlet property="logoLabel" destination="zxf-0z-u6B" id="IXS-5Z-odq"/>
-                <outlet property="logoTopConstraint" destination="rde-wy-M9a" id="ZCO-av-06l"/>
+                <outlet property="logoTopConstraint" destination="Vqp-Ks-aDd" id="QMt-nR-sbj"/>
                 <outlet property="startQuizButton" destination="Ion-9h-frc" id="x9n-sr-omk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,12 +27,41 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landing_Background" translatesAutoresizingMaskIntoConstraints="NO" id="6aj-0b-0vM">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUIZER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxf-0z-u6B">
-                    <rect key="frame" x="37" y="120" width="246" height="78"/>
-                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="60"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yi-yS-v0c">
+                    <rect key="frame" x="47.5" y="120" width="225" height="221.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZfZ-71-cgR">
+                            <rect key="frame" x="0.0" y="0.0" width="225" height="221.5"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="kvF-iX-pe3">
+                                    <rect key="frame" x="37.5" y="0.0" width="150" height="150"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="kvF-iX-pe3" secondAttribute="height" multiplier="1:1" id="D3A-RS-Ypa"/>
+                                        <constraint firstAttribute="width" constant="150" id="QTW-Fg-SfE"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="75"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="QUIZER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxf-0z-u6B">
+                                    <rect key="frame" x="0.0" y="150" width="225" height="71.5"/>
+                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="55"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ZfZ-71-cgR" firstAttribute="top" secondItem="6yi-yS-v0c" secondAttribute="top" id="LLW-SK-TKG"/>
+                        <constraint firstAttribute="bottom" secondItem="ZfZ-71-cgR" secondAttribute="bottom" id="YOz-bD-P4d"/>
+                        <constraint firstAttribute="trailing" secondItem="ZfZ-71-cgR" secondAttribute="trailing" id="kPX-BF-ok8"/>
+                        <constraint firstItem="ZfZ-71-cgR" firstAttribute="leading" secondItem="6yi-yS-v0c" secondAttribute="leading" id="vO5-bD-cBU"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ion-9h-frc">
                     <rect key="frame" x="53.5" y="403" width="213" height="45"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -54,15 +84,17 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6aj-0b-0vM" secondAttribute="trailing" id="9PA-bk-aYS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ion-9h-frc" secondAttribute="bottom" constant="32" id="KeU-tj-JKw"/>
                 <constraint firstItem="Ion-9h-frc" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="2:3" id="V4P-Wq-Vxb"/>
+                <constraint firstItem="6yi-yS-v0c" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="120" id="Vqp-Ks-aDd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6aj-0b-0vM" secondAttribute="bottom" id="Ybr-yL-iYN"/>
-                <constraint firstItem="zxf-0z-u6B" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="120" id="rde-wy-M9a"/>
-                <constraint firstItem="zxf-0z-u6B" firstAttribute="centerX" secondItem="6aj-0b-0vM" secondAttribute="centerX" id="vCt-RL-dP8"/>
+                <constraint firstItem="6yi-yS-v0c" firstAttribute="centerX" secondItem="6aj-0b-0vM" secondAttribute="centerX" id="hCa-lv-1lY"/>
                 <constraint firstItem="6aj-0b-0vM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yq9-qa-lPC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="61.875" y="75"/>
         </view>
     </objects>
     <resources>
         <image name="Landing_Background" width="1080" height="1920"/>
+        <image name="Logo" width="512" height="512"/>
     </resources>
 </document>

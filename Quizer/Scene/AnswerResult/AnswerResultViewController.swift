@@ -27,10 +27,14 @@ class AnswerResultViewController: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
+    Vibrator.vibrate(hardness: 4)
     animationView.play()
     if viewModel.status == .success {
+      Vibrator.vibrate(hardness: 2)
       glowingAnimation()
+      return
     }
+    Vibrator.vibrate(hardness: 1)
   }
   
   func setupUI(){
