@@ -1,4 +1,4 @@
-# Quiz Application using Clean architecture and RxSwift
+# Quiz Application using Clean architecture, MVVM and RxSwift
 
 ### Installing and build
 
@@ -19,14 +19,14 @@ Domain > NetworkPlatform > Application
 
 #### Domain 
 
-The `Domain` is basically what is your App about and what it can do (Entities, UseCase etc.) **It does not depend on UIKit or any persistence framework**, and it doesn't have implementations apart from entities
+The `Domain` is basically what is the App about and what it can do (Entities, UseCase etc.) **It does not depend on UIKit or any persistence framework**, and it doesn't have implementations apart from entities
 
 #### Platform
 
 The `Platform` is a concrete implementation of the `Domain` in a specific platform like iOS. It does hide all implementation details.
 
 #### Application
-`Application` is responsible for delivering information to the user and handling user input. It can be implemented with any delivery pattern e.g (MVVM, MVC, MVP). This is the place for your `UIView`s and `UIViewController`s. As you will see from the quiz app, `ViewControllers` are completely independent of the `Platform`.  The only responsibility of a view controller is to "bind" the UI to the Domain to make things happen.
+`Application` is responsible for delivering information to the user and handling user input. It can be implemented with any delivery pattern e.g (in quiz app is MVVM). This is the place for `UIView`s and `UIViewController`s. As you will see from the quiz app, `ViewControllers` are completely independent of the `Platform`.  The only responsibility of a view controller is to "bind" the UI to the Domain to make things happen.
 
 ### Refrences
 * [RxSwift](https://github.com/ReactiveX/RxSwift)
@@ -38,3 +38,4 @@ The `Platform` is a concrete implementation of the `Domain` in a specific platfo
 ### Contact me
 
 * feel free to contact by [Email](mailto://behrad.kzm@gmail.com)
+* or send me message on [Telegram](https://t.me/berad)
